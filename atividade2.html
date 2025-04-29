@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>document</title>
+</head>
+<body>
+    <h1>IMPAR OU PAR</h1>
+
+    <p>Digite o primeiro numero:</p>
+    <input type="text" id="numero1">
+    <br>
+
+    <p>Digite o segundo numero:</p>
+    <input type="text" id="numero2">
+
+    <br>
+    <br>
+    <br>
+    <button id="verificar">Verificar</button>
+
+    <script>
+
+        document.getElementById("verificar").addEventListener("click", function() {
+
+            let numero1 = document.getElementById("numero1").value;
+            let numero2 = document.getElementById("numero2").value;
+
+
+            numero1 = parseInt(numero1);
+            numero2 = parseInt(numero2);
+
+
+            let soma = numero1 + numero2;
+
+
+            if (isNaN(soma)) {
+                alert("ERRADO.");
+            } 
+
+            else if (soma % 2 === 0) {
+                alert("PARRRR");
+            } 
+
+            else {
+                alert("IMPARRR");
+            }
+        });
+    </script>
+</body>
+</html>
